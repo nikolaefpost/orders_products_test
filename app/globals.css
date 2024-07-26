@@ -105,3 +105,18 @@ a {
     color-scheme: dark;
   }
 }
+
+.sidebar {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.profile-section {
+  padding: 20px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+}
+
