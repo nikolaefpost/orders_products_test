@@ -4,12 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/NavigationMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/TopMenu.tsx" afterDir="false" />
+    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="feat: start">
+      <change afterPath="$PROJECT_DIR$/app/ReduxProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/orders/orders.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/orders/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/products/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Hurdy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/user-shield-64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/navigationMenu/NavigationMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/navigationMenu/NavigationMenuList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/navigationMenu/navigation_menu.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topMenu/Date_Time.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topMenu/Search.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topMenu/TopMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/topMenu/top_menu.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/useClock.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/ordersSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/productsSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavigationMenu.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/TopMenu.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -21,8 +42,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -31,6 +54,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -45,17 +71,30 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yemel/WebstormProjects/orders_products&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yemel/WebstormProjects/WeatherForecast&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\yemel\\WebstormProjects\\orders_products\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yemel\WebstormProjects\orders_products\assets\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yemel\WebstormProjects\orders_products" />
+      <recent name="C:\Users\yemel\WebstormProjects\orders_products\components\navigationMenu" />
+      <recent name="C:\Users\yemel\WebstormProjects\orders_products\components\topMenu" />
+      <recent name="C:\Users\yemel\WebstormProjects\orders_products\components" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -73,6 +112,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -85,10 +131,42 @@
       <workItem from="1721902826103" duration="226000" />
       <workItem from="1721903137150" duration="3361000" />
       <workItem from="1721974533361" duration="20000" />
+      <workItem from="1721975202851" duration="1560000" />
+      <workItem from="1722002264504" duration="2214000" />
+      <workItem from="1722005989039" duration="684000" />
+      <workItem from="1722006680962" duration="1300000" />
+      <workItem from="1722064991928" duration="484000" />
+      <workItem from="1722065485802" duration="8470000" />
+      <workItem from="1722074044719" duration="15437000" />
+      <workItem from="1722158803697" duration="2936000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: start">
+      <option name="closed" value="true" />
+      <created>1721975620170</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721975620170</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: start" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: start" />
   </component>
 </project>

@@ -1,7 +1,31 @@
+'use client';
 import Image from "next/image";
 import styles from "./page.module.css";
+import {Provider, useDispatch, useSelector} from 'react-redux';
+import store, {RootState, AppDispatch} from '../store';
+import type {AppProps} from 'next/app';
+import {useEffect} from "react";
+import { fetchOrders } from '@/store/ordersSlice';
+import { fetchProducts } from '@/store/productsSlice';
 
 export default function Home() {
+  const dispatch: AppDispatch = useDispatch();
+  const orders = useSelector((state: RootState) => state.orders.orders);
+  const ordersStatus = useSelector((state: RootState) => state.orders.status);
+  const ordersError = useSelector((state: RootState) => state.orders.error);
+
+  const products = useSelector((state: RootState) => state.products.products);
+  const productsStatus = useSelector((state: RootState) => state.products.status);
+  const productsError = useSelector((state: RootState) => state.products.error);
+  useEffect(() => {
+    if (ordersStatus === 'idle') {
+      dispatch(fetchOrders());
+    }
+    if (productsStatus === 'idle') {
+      dispatch(fetchProducts());
+    }
+  }, [ordersStatus, productsStatus, dispatch]);
+  console.log(orders)
   return (
     <main className={styles.main}>
       <div className={styles.description}>

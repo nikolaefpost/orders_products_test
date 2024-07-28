@@ -96,8 +96,13 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit!important;
+  text-decoration: none!important;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0!important;
+  padding: 0!important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,17 +111,18 @@ a {
   }
 }
 
-.sidebar {
-  min-height: 100vh;
-  padding: 0;
+/*.top_menu {*/
+/*  height: 100px;*/
+/*  padding: 0 200px;*/
+/*}*/
+
+.shield-icon {
+  width: 64px;
+  height: 64px;
 }
 
-.profile-section {
-  padding: 20px;
+.content{
+  height: calc(100vh - 100px);
 }
 
-.profile-img {
-  width: 100px;
-  height: 100px;
-}
 
