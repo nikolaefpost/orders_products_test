@@ -1,25 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import {IProduct} from "@/types";
 
-interface Product {
-    id: number;
-    serialNumber: number;
-    isNew: number;
-    photo: string;
-    title: string;
-    type: string;
-    specification: string;
-    guarantee: {
-        start: string;
-        end: string;
-    };
-    price: { value: number; symbol: string; isDefault: number }[];
-    order: number;
-    date: string;
-}
 
 interface ProductsState {
-    products: Product[];
+    products: IProduct[];
     status: 'idle' | 'loading' | 'succeeded' | 'failed';
     error: string | null;
 }
@@ -31,7 +16,7 @@ const initialState: ProductsState = {
 };
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-    const response = await axios.get('/products');
+    const response = await axios.get('http://localhost:3001/products');
     return response.data;
 });
 

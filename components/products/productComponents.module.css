@@ -1,0 +1,51 @@
+.product{
+    width: 2900px;
+}
+
+.product_status{
+    width: 50px;
+}
+
+.product_image{
+    width: 100px;
+}
+
+.product_title{
+    width: 750px;
+}
+
+.product_status_text{
+    width: 150px;
+}
+
+.product_guarantee{
+    width: 200px;
+}
+
+.product_state{
+    width: 150px;
+}
+
+.product_price{
+    width: 200px;
+}
+
+.product_group{
+    width: 500px;
+}
+
+.product_author{
+    width: 200px;
+}
+
+.product_order{
+    width: 500px;
+}
+
+.product_date{
+    width: 200px;
+}
+
+.product_delete{
+    width: 100px;
+}

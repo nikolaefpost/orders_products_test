@@ -10,7 +10,7 @@ import ReduxProvider from './ReduxProvider';
 const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-    title: "Orders & Products",
+    title: "OrdersAll & Products",
     description: "Test project",
 };
 

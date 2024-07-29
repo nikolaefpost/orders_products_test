@@ -1,36 +1,12 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3001';
+import {IOrder} from "@/types";
 
-interface Order {
-    id: number;
-    title: string;
-    date: string;
-    description: string;
-    products: Product[];
-}
-
-interface Product {
-    id: number;
-    serialNumber: number;
-    isNew: number;
-    photo: string;
-    title: string;
-    type: string;
-    specification: string;
-    guarantee: {
-        start: string;
-        end: string;
-    };
-    price: { value: number; symbol: string; isDefault: number }[];
-    order: number;
-    date: string;
-}
 
 interface OrdersState {
-    orders: Order[];
+    orders: IOrder[];
     status: 'idle' | 'loading' | 'succeeded' | 'failed';
-    error: string | null;
+    error: string | undefined | null;
 }
 
 const initialState: OrdersState = {
@@ -40,14 +16,18 @@ const initialState: OrdersState = {
 };
 
 export const fetchOrders = createAsyncThunk('orders/fetchOrders', async () => {
-    const response = await axios.get('/orders');
+    const response = await axios.get('http://localhost:3001/orders');
     return response.data;
 });
 
 const ordersSlice = createSlice({
     name: 'orders',
     initialState,
-    reducers: {},
+    reducers: {
+        removeOrder: (state, action: PayloadAction<number>) => {
+            state.orders = state.orders.filter(order => order.id !== action.payload);
+        },
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchOrders.pending, (state) => {
@@ -59,9 +39,11 @@ const ordersSlice = createSlice({
             })
             .addCase(fetchOrders.rejected, (state, action) => {
                 state.status = 'failed';
-                state.error = action.error.message || null;
+                state.error = action.error.message;
             });
     },
 });
+
+export const { removeOrder } = ordersSlice.actions;
 
 export default ordersSlice.reducer;
