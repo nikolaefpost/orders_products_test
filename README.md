@@ -24,7 +24,7 @@ This project is a web application for managing orders and products using Next.js
 
 1. **Clone the repository:**
     ```sh
-    git clone <https://github.com/nikolaefpost/orders_products_test.git>
+    git clone https://github.com/nikolaefpost/orders_products_test.git
     cd orders_products
     ```
 
