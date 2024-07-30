@@ -37,6 +37,7 @@ const OrderListShort: FC<OrderListShortProps> = ({
                     products={currentOrders.products}
                     title={currentOrders.title}
                     handlerHideProducts={handlerHideProducts}
+                    orderId={orderId}
                 />
             </Col>
         </Row>

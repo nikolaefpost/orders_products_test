@@ -6,10 +6,12 @@ import {RiDeleteBin6Line} from "react-icons/ri";
 import styles from "./productComponents.module.css";
 import cn from "classnames";
 import {getOrderTitle, transformDate, transformDateWithTime} from "@/helpers";
-import {removeProduct} from "@/store/productsSlice";
 import {useDispatch} from "react-redux";
 import ModalCustom from "@/components/UI/ModalCustom";
 import ProductItemModal from "@/components/products/ProductItemModal";
+import {AppDispatch} from "@/store";
+import {deleteProductFromOrder} from "@/store/ordersSlice";
+import {removeProduct} from "@/store/productsSlice";
 
 interface ProductItemProps {
     product: IProduct;
@@ -17,7 +19,7 @@ interface ProductItemProps {
 }
 
 const ProductItem: FC<ProductItemProps> = ({product, orders}) => {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
     const [show, setShow] = useState(false);
     const isNew = product.isNew === 1
     const {dateString: guaranteeStart} = transformDate(product.guarantee.start)
@@ -27,9 +29,10 @@ const ProductItem: FC<ProductItemProps> = ({product, orders}) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    console.log()
     const handleRemoveOrder = () => {
-        dispatch(removeProduct(product.id));
+        dispatch(deleteProductFromOrder({orderId: product.order, productId: product.id}));
+        dispatch(removeProduct(product.id))
     };
 
     return (<>

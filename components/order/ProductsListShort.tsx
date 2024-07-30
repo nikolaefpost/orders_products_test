@@ -9,9 +9,10 @@ interface ProductsListProps {
     products: IProduct[];
     title: string;
     handlerHideProducts: () => void;
+    orderId: number
 }
 
-const ProductsListShort: FC<ProductsListProps> = ({products, title, handlerHideProducts}) => {
+const ProductsListShort: FC<ProductsListProps> = ({products, title, handlerHideProducts, orderId}) => {
     return (
         <div className="container  position-relative p-4 bg-body rounded">
             <CloseButtonCustom handlerHide={handlerHideProducts}/>
@@ -24,7 +25,7 @@ const ProductsListShort: FC<ProductsListProps> = ({products, title, handlerHideP
                 </Col>
             </Row>
             {products.map(item=>(
-                <ProductItemShort key={item.id} product={item} />
+                <ProductItemShort key={item.id} product={item} orderId={orderId} />
             ))}
         </div>
     );

@@ -4,17 +4,20 @@ import Image from "next/image";
 import {IProduct} from "@/types";
 import {RiDeleteBin6Line} from "react-icons/ri";
 import {useDispatch} from "react-redux";
-import {removeProduct} from "@/store/productsSlice";
 import ProductItemModal from "@/components/products/ProductItemModal";
 import ModalCustom from "@/components/UI/ModalCustom";
+import {AppDispatch} from "@/store";
+import { removeProduct} from "@/store/productsSlice";
+import {deleteProductFromOrder} from "@/store/ordersSlice";
 
 
 interface ProductItemProps {
-    product: IProduct
+    product: IProduct;
+    orderId: number
 }
 
 const ProductItemShort: FC<ProductItemProps> = ({product}) => {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
     const [show, setShow] = useState(false);
     const isNew = product.isNew === 1
 
@@ -22,7 +25,8 @@ const ProductItemShort: FC<ProductItemProps> = ({product}) => {
     const handleShow = () => setShow(true);
 
     const handleRemoveOrder = () => {
-        dispatch(removeProduct(product.id));
+        dispatch(deleteProductFromOrder({orderId: product.order, productId: product.id}));
+        dispatch(removeProduct(product.id))
     };
     return (<>
             <Row className="  py-3 align-items-center border rounded">
