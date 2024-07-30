@@ -6,7 +6,7 @@ const useClock = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setTime(new Date());
-        }, 60000); // Update every minute
+        }, 1000); // Update every minute
 
         return () => clearInterval(intervalId); // Cleanup interval on component unmount
     }, []);

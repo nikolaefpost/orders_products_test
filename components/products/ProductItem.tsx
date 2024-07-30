@@ -1,11 +1,11 @@
 import React, {FC, useState} from 'react';
 import {IOrder, IProduct} from "@/types";
-import {Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import Image from "next/image";
 import {RiDeleteBin6Line} from "react-icons/ri";
 import styles from "./productComponents.module.css";
 import cn from "classnames";
-import {getOrderTitle, transformDate, transformDateWithTime} from "@/helpers";
+import {getOrderTitle, transformDate, transformDateNumber, transformDateWithTime} from "@/helpers";
 import {useDispatch} from "react-redux";
 import ModalCustom from "@/components/UI/ModalCustom";
 import ProductItemModal from "@/components/products/ProductItemModal";
@@ -24,12 +24,12 @@ const ProductItem: FC<ProductItemProps> = ({product, orders}) => {
     const isNew = product.isNew === 1
     const {dateString: guaranteeStart} = transformDate(product.guarantee.start)
     const {dateString: guaranteeEnd} = transformDate(product.guarantee.end);
-    const {dateString, timeString} = transformDateWithTime(product.date);
+    const {dateString} = transformDate(product.date);
+    const { dateString: numberFormat} = transformDateNumber(product.date)
 
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    console.log()
     const handleRemoveOrder = () => {
         dispatch(deleteProductFromOrder({orderId: product.order, productId: product.id}));
         dispatch(removeProduct(product.id))
@@ -64,12 +64,16 @@ const ProductItem: FC<ProductItemProps> = ({product, orders}) => {
                     {/*{isNew ? <span className="text-success">Свободен</span> :*/}
                     {/*    <span className="text-dark">В ремонте</span>}*/}
                 </div>
-                <div className={cn("d-flex flex-column flex-shrink-0", styles.product_guarantee)}>
-                    <span>{guaranteeStart}</span>
-                    <span className="text-body-secondary">SN-{guaranteeEnd}</span>
+                <div className={cn("d-flex flex-column flex-shrink-0 align-items-end", styles.product_guarantee)}>
+                    <span> с {guaranteeStart}</span>
+                    <span className="text-body-secondary">по {guaranteeEnd}</span>
                 </div>
                 <div className={cn("d-flex flex-column flex-shrink-0", styles.product_state)}>
                     <span>{isNew ? "Новый" : "Б/У"}</span>
+                </div>
+                <div className={cn("d-flex flex-column flex-shrink-0", styles.product_price)} >
+                    <span style={{ fontSize: "12px" }}> {product.price[0]?.value} $</span>
+                    <span>{product.price[1]?.value} UAN</span>
                 </div>
                 <div className={cn("d-flex flex-column flex-shrink-0", styles.product_group)}>
                     <span>Монитор 28" Samsung Odyssey G7 проверенные на битые пиксели</span>
@@ -81,7 +85,7 @@ const ProductItem: FC<ProductItemProps> = ({product, orders}) => {
                     <span>{getOrderTitle(orders, product.order)}</span>
                 </div>
                 <div className={cn("d-flex flex-column align-items-center flex-shrink-0", styles.product_date)}>
-                    <span style={{fontSize: "12px"}}> {timeString}</span>
+                    <span style={{fontSize: "12px"}}> {numberFormat}</span>
                     <span>{dateString}</span>
                 </div>
                 <div className={cn("flex-shrink-0", styles.product_delete)}>

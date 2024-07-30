@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { IOrder } from "@/types";
 import { FaList } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { calculateTotalAmounts, transformDateWithTime } from "@/helpers";
+import {calculateTotalAmounts, transformDate, transformDateNumber, transformDateWithTime} from "@/helpers";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/store";
 import { deleteOrder } from "@/store/ordersSlice";
@@ -20,7 +20,8 @@ const OrderItem: FC<OrderItemProps> = ({ order, handlerShowProducts }) => {
     const [show, setShow] = useState(false);
     const { id, title, date, products } = order;
     const amountProduct = products.length;
-    const { dateString, timeString } = transformDateWithTime(date);
+    const { dateString} = transformDate(date);
+    const { dateString: numberFormat} = transformDateNumber(date)
     const { totalUAH, totalUSD } = calculateTotalAmounts(products);
 
     const handleClose = () => setShow(false);
@@ -48,7 +49,7 @@ const OrderItem: FC<OrderItemProps> = ({ order, handlerShowProducts }) => {
                     </div>
                 </Col>
                 <Col className="d-flex flex-column align-items-center" md="2">
-                    <span style={{ fontSize: "12px" }}> {timeString}</span>
+                    <span style={{ fontSize: "12px" }}> {numberFormat}</span>
                     <span>{dateString}</span>
                 </Col>
                 <Col className="d-flex flex-column " md="2">
@@ -69,7 +70,7 @@ const OrderItem: FC<OrderItemProps> = ({ order, handlerShowProducts }) => {
                     title={title}
                     amountProduct={amountProduct}
                     dateString={dateString}
-                    timeString={timeString}
+                    numberFormat={numberFormat}
                     totalUSD={totalUSD}
                     totalUAH={totalUAH}
                 />

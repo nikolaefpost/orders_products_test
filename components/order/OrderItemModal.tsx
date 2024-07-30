@@ -4,7 +4,7 @@ import {Col, Row} from "react-bootstrap";
 interface OrderItemModalProps {
     title: string;
     amountProduct: number;
-    timeString: string;
+    numberFormat: string;
     dateString: string;
     totalUSD: number;
     totalUAH: number
@@ -13,7 +13,7 @@ interface OrderItemModalProps {
 const OrderItemModal: FC<OrderItemModalProps> = ({
                                                      title,
                                                      amountProduct,
-                                                     timeString,
+                                                     numberFormat,
                                                      totalUSD,
                                                      totalUAH,
                                                      dateString
@@ -29,7 +29,7 @@ const OrderItemModal: FC<OrderItemModalProps> = ({
 
             </Col>
             <Col className="d-flex flex-column align-items-center" md="3">
-                <span style={{fontSize: "12px"}}> {timeString}</span>
+                <span style={{fontSize: "12px"}}> {numberFormat}</span>
                 <span>{dateString}</span>
             </Col>
             <Col className="d-flex flex-column " md="2">

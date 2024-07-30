@@ -15,7 +15,6 @@ const sideMenu = [
 
 const NavigationMenuList = () => {
     const pathname = usePathname();
-    console.log(pathname === '/orders')
 
     return (
         <div className='d-flex flex-column align-items-center justify-content-start py-5 row-gap-2'>

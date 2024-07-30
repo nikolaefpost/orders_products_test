@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="feat: Products Orders UI">
+    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="feat: server draft working version">
+      <change afterPath="$PROJECT_DIR$/components/order/order.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/orders/orders.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/orders/orders.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigationMenu/NavigationMenuList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigationMenu/NavigationMenuList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/order/OrderItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrderItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/order/OrderListShort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrderListShort.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/order/ProductItemShort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/ProductItemShort.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/order/ProductsListShort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/ProductsListShort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/OrderItemModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrderItemModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/OrdersAll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrdersAll.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/products/ProductItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/products/ProductItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/data.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/ordersSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/ordersSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/products/productComponents.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/products/productComponents.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useClock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useClock.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/productsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/productsSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +33,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
-        <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -131,6 +138,7 @@
       <workItem from="1722253759005" duration="12688000" />
       <workItem from="1722319654763" duration="3237000" />
       <workItem from="1722322903581" duration="8674000" />
+      <workItem from="1722349591872" duration="1058000" />
     </task>
     <task id="LOCAL-00001" summary="feat: start">
       <option name="closed" value="true" />
