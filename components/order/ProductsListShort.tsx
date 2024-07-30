@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
-import {CloseButton, Col, Row} from "react-bootstrap";
+import { Col, Row} from "react-bootstrap";
 import {IProduct} from "@/types";
 import { BiSolidPlusCircle } from "react-icons/bi";
 import ProductItemShort from "@/components/order/ProductItemShort";
+import CloseButtonCustom from "@/components/UI/CloseButtonCustom";
 
 interface ProductsListProps {
     products: IProduct[];
@@ -13,13 +14,7 @@ interface ProductsListProps {
 const ProductsListShort: FC<ProductsListProps> = ({products, title, handlerHideProducts}) => {
     return (
         <div className="container  position-relative p-4 bg-body rounded">
-            <div
-                className="position-absolute  border rounded-circle p-1 shadow bg-body
-                 d-flex justify-content-center align-items-center"
-                style={{top: "-15px", right: "-15px"}}
-            >
-                <CloseButton aria-label="Hide"  onClick={handlerHideProducts} />
-            </div>
+            <CloseButtonCustom handlerHide={handlerHideProducts}/>
 
             <h4 className="text-capitalize">{title}</h4>
             <Row className="d-flex my-4 ">

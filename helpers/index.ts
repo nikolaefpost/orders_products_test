@@ -55,3 +55,15 @@ export const calculateTotalAmounts = (products: IProduct[]): { totalUSD: number,
 export const getOrderTitle = (orders: IOrder[], id: number): string => {
     return orders.find(order=>order.id === id)?.title ?? ""
 }
+
+export const getTypeProduct = (products: IProduct[]): Set<string> =>{
+    const set = new Set<string>();
+    products.forEach(product=>set.add(product.type))
+    return set
+}
+
+export const getSpecificationProduct = (products: IProduct[]): Set<string> =>{
+    const set = new Set<string>();
+    products.forEach(product=>set.add(product.specification))
+    return set
+}

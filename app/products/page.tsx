@@ -1,25 +1,85 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useFetchOrdersAndProducts from "@/hooks/useFetchOrdersAndProducts";
-import {Button} from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import ProductsList from "@/components/products/ProductsList";
+import Form from 'react-bootstrap/Form';
+import { getSpecificationProduct, getTypeProduct } from "@/helpers";
+import { IProduct } from "@/types";
 
 const Products = () => {
+    const [localProducts, setLocalProducts] = useState<IProduct[]>([]);
+    const [selectedType, setSelectedType] = useState<string>('');
+    const [selectedSpecification, setSelectedSpecification] = useState<string>('');
     const {
         orders,
         products,
         productsStatus,
-        productsError } = useFetchOrdersAndProducts();
-    console.log(products)
+        productsError
+    } = useFetchOrdersAndProducts();
+
+    const productsType = getTypeProduct(products);
+    const productsSpecification = getSpecificationProduct(products);
+
+    useEffect(() => {
+        filterProducts();
+    }, [products, selectedType, selectedSpecification]);
+
+    const filterProducts = () => {
+        let filteredProducts = products;
+
+        if (selectedType) {
+            filteredProducts = filteredProducts.filter(product => product.type === selectedType);
+        }
+
+        if (selectedSpecification) {
+            filteredProducts = filteredProducts.filter(product => product.specification === selectedSpecification);
+        }
+
+        setLocalProducts(filteredProducts);
+    };
+
+    const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedType(event.target.value);
+    };
+
+    const handleSpecificationChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedSpecification(event.target.value);
+    };
+
     return (
         <div className='p-5 overflow-x-auto'>
             <div className='d-flex align-items-center justify-content-start '>
                 <Button size="lg" className="rounded-circle me-3" variant="success">+</Button>
-                <h3> Продукты / {products.length} </h3>
+                <h3> Продукты / {localProducts.length} </h3>
+                <span className="me-2 ms-4">Тип: </span>
+                <Form.Select
+                    aria-label="Default select example"
+                    className="w-25"
+                    onChange={handleTypeChange}
+                    value={selectedType}
+                >
+                    <option value=''>Выберите тип продукта</option>
+                    {Array.from(productsType).map(type => (
+                        <option key={type} value={type}>{type}</option>
+                    ))}
+                </Form.Select>
+                <span className="me-2 ms-4">Спецификация: </span>
+                <Form.Select
+                    aria-label="Default select example"
+                    className="w-25"
+                    onChange={handleSpecificationChange}
+                    value={selectedSpecification}
+                >
+                    <option value=''>Выберите спецификацию продукта</option>
+                    {Array.from(productsSpecification).map(specification => (
+                        <option key={specification} value={specification}>{specification}</option>
+                    ))}
+                </Form.Select>
             </div>
             {productsStatus === 'loading' && <p>Loading...</p>}
             {productsStatus === 'failed' && <p>Error: {productsError}</p>}
-            {productsStatus === 'succeeded' && <ProductsList products={products} orders={orders}/>}
+            {productsStatus === 'succeeded' && <ProductsList products={localProducts} orders={orders} />}
         </div>
     );
 };

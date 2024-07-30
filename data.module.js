@@ -24,7 +24,7 @@ const products = [
         isNew: 1,
         photo: 'https://files.foxtrot.com.ua/PhotoNew/img_0_10_4251_1.jpg',
         title: 'Product 2',
-        type: 'Motherboards',
+        type: 'Monitors',
         specification: 'Specification 2',
         guarantee: {
             start: '2017-06-29 12:09:33',
