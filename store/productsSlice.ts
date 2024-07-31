@@ -1,13 +1,7 @@
 import {createSlice, createAsyncThunk, PayloadAction} from '@reduxjs/toolkit';
 import axios from 'axios';
-import {IProduct} from "@/types";
+import { ProductsState} from "@/types";
 
-
-interface ProductsState {
-    products: IProduct[];
-    status: 'idle' | 'loading' | 'succeeded' | 'failed';
-    error: string | null;
-}
 
 const initialState: ProductsState = {
     products: [],

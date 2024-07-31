@@ -1,9 +1,8 @@
 import React, { FC, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import OrderList from "@/components/order/OrderList";
 import OrderListShort from "@/components/order/OrderListShort";
 import { IOrder } from "@/types";
-import cn from "classnames";
-import './order.css'; // Import the CSS file for animations
 
 interface OrdersAllProps {
     orders: IOrder[];
@@ -25,25 +24,34 @@ const OrdersAll: FC<OrdersAllProps> = ({ orders }) => {
     const handlerHideProducts = () => setShowProducts(false);
 
     return (
-        <div>
+        <AnimatePresence mode="wait">
             {!showProducts ? (
-                <div
-                    // className={`fade ${showProducts ? 'fade-hidden' : ''}`}
-                    className={cn("my_fade",{["my_fade-hidden"]: showProducts})}
+                <motion.div
+                    key="order-list"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ duration: 0.3 }}
                 >
                     <OrderList orders={orders} handlerShowProducts={handlerShowProducts} />
-                </div>
+                </motion.div>
             ) : (
-                <div className={cn("my_fade",{["my_fade-hidden"]: !showProducts})}>
+                <motion.div
+                    key="order-list-short"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ duration: 0.3 }}
+                >
                     <OrderListShort
                         orderId={orderId}
                         orders={orders}
                         handlerChangeOrderId={handlerChangeOrderId}
                         handlerHideProducts={handlerHideProducts}
                     />
-                </div>
+                </motion.div>
             )}
-        </div>
+        </AnimatePresence>
     );
 };
 

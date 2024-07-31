@@ -1,12 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { IOrder } from '@/types';
-
-interface OrdersState {
-    orders: IOrder[];
-    status: 'idle' | 'loading' | 'succeeded' | 'failed';
-    error: string | undefined | null;
-}
+import { IOrder, OrdersState } from '@/types';
 
 const initialState: OrdersState = {
     orders: [],
@@ -16,7 +10,7 @@ const initialState: OrdersState = {
 
 export const fetchOrders = createAsyncThunk('orders/fetchOrders', async () => {
     const response = await axios.get('http://localhost:3001/orders');
-    return response.data;
+    return response.data as IOrder[];
 });
 
 export const deleteOrder = createAsyncThunk('orders/deleteOrder', async (orderId: number) => {
@@ -26,7 +20,6 @@ export const deleteOrder = createAsyncThunk('orders/deleteOrder', async (orderId
 
 export const deleteProductFromOrder = createAsyncThunk('orders/deleteProductFromOrder', async (payload: { orderId: number, productId: number }) => {
     const { orderId, productId } = payload;
-    console.log(productId)
     await axios.delete(`http://localhost:3001/orders/${orderId}/products/${productId}`);
     return payload;
 });
@@ -40,13 +33,13 @@ const ordersSlice = createSlice({
             .addCase(fetchOrders.pending, (state) => {
                 state.status = 'loading';
             })
-            .addCase(fetchOrders.fulfilled, (state, action) => {
+            .addCase(fetchOrders.fulfilled, (state, action: PayloadAction<IOrder[]>) => {
                 state.status = 'succeeded';
                 state.orders = action.payload;
             })
             .addCase(fetchOrders.rejected, (state, action) => {
                 state.status = 'failed';
-                state.error = action.error.message;
+                state.error = action.error.message || null;
             })
             .addCase(deleteOrder.pending, (state) => {
                 state.status = 'loading';
@@ -57,7 +50,7 @@ const ordersSlice = createSlice({
             })
             .addCase(deleteOrder.rejected, (state, action) => {
                 state.status = 'failed';
-                state.error = action.error.message;
+                state.error = action.error.message || null;
             })
             .addCase(deleteProductFromOrder.pending, (state) => {
                 state.status = 'loading';
@@ -72,7 +65,7 @@ const ordersSlice = createSlice({
             })
             .addCase(deleteProductFromOrder.rejected, (state, action) => {
                 state.status = 'failed';
-                state.error = action.error.message;
+                state.error = action.error.message || null;
             });
     },
 });

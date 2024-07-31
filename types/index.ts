@@ -22,3 +22,15 @@ export interface IOrder {
     description: string;
     products: IProduct[];
 }
+
+export interface OrdersState {
+    orders: IOrder[];
+    status: 'idle' | 'loading' | 'succeeded' | 'failed';
+    error: string | undefined | null;
+}
+
+export interface ProductsState {
+    products: IProduct[];
+    status: 'idle' | 'loading' | 'succeeded' | 'failed';
+    error: string | null;
+}

@@ -6,11 +6,13 @@ import ProductsList from "@/components/products/ProductsList";
 import Form from 'react-bootstrap/Form';
 import { getSpecificationProduct, getTypeProduct } from "@/helpers";
 import { IProduct } from "@/types";
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Products = () => {
     const [localProducts, setLocalProducts] = useState<IProduct[]>([]);
     const [selectedType, setSelectedType] = useState<string>('');
     const [selectedSpecification, setSelectedSpecification] = useState<string>('');
+    const [animatedKey, setAnimatedKey] = useState<number>(1);
     const {
         orders,
         products,
@@ -28,6 +30,7 @@ const Products = () => {
     const filterProducts = () => {
         let filteredProducts = products;
 
+
         if (selectedType) {
             filteredProducts = filteredProducts.filter(product => product.type === selectedType);
         }
@@ -35,7 +38,7 @@ const Products = () => {
         if (selectedSpecification) {
             filteredProducts = filteredProducts.filter(product => product.specification === selectedSpecification);
         }
-
+        setAnimatedKey(prev=>prev === 1 ? 0: 1)
         setLocalProducts(filteredProducts);
     };
 
@@ -79,7 +82,19 @@ const Products = () => {
             </div>
             {productsStatus === 'loading' && <p>Loading...</p>}
             {productsStatus === 'failed' && <p>Error: {productsError}</p>}
-            {productsStatus === 'succeeded' && <ProductsList products={localProducts} orders={orders} />}
+            {productsStatus === 'succeeded' && (
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={animatedKey} // use a key that changes when localProducts changes
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1, }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <ProductsList products={localProducts} orders={orders} />
+                    </motion.div>
+                </AnimatePresence>
+            )}
         </div>
     );
 };

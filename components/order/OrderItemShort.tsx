@@ -16,7 +16,7 @@ const OrderItemShort: FC<OrderItemProps> = ({order, handlerChangeOrderId, orderI
     const { dateString, timeString } = transformDateWithTime(date);
     return (
         <Row className='justify-content-start border mt-2 py-3 align-items-center shadow rounded position-relative'>
-            <Col md="4" className="d-flex justify-content-start align-items-center column-gap-3">
+            <Col md="5" className="d-flex justify-content-start align-items-center column-gap-3">
                 <div className="border rounded-circle p-2 d-flex justify-content-center align-items-center ">
                     <button
                         className="border-0 bg-transparent"
@@ -29,7 +29,7 @@ const OrderItemShort: FC<OrderItemProps> = ({order, handlerChangeOrderId, orderI
                 </div>
 
             </Col>
-            <Col className="d-flex flex-column align-items-center" md="5">
+            <Col className="d-flex flex-column align-items-center" md="6">
                 <span  style={{fontSize: "12px"}}> {timeString}</span>
                 <span>{dateString}</span>
             </Col>

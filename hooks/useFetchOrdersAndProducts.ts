@@ -3,8 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '@/store';
 import { fetchOrders } from '@/store/ordersSlice';
 import { fetchProducts } from '@/store/productsSlice';
+import {IOrder, IProduct} from "@/types";
 
-const useFetchOrdersAndProducts = () => {
+interface UseFetchOrdersAndProductsResult {
+    orders: IOrder[];
+    ordersStatus: 'idle' | 'loading' | 'succeeded' | 'failed';
+    ordersError: string | null | undefined;
+    products: IProduct[];
+    productsStatus: 'idle' | 'loading' | 'succeeded' | 'failed';
+    productsError: string | null;
+}
+
+const useFetchOrdersAndProducts = (): UseFetchOrdersAndProductsResult => {
     const dispatch: AppDispatch = useDispatch();
 
     const orders = useSelector((state: RootState) => state.orders.orders);
