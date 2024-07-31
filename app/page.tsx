@@ -8,7 +8,7 @@ const myData = [
     { text: "phone: +38 (093) 656-27-80", isLink: false, url: "" },
     { text: "skype: live:45689e144640a3e", isLink: false, url: "" },
     { text: "telegram: @Eduard_7", isLink: false, url: "" },
-    { text: "my site: https://yemelyanov-eduardfrontend.netlify.app", isLink: true, url: "https://yemelyanov-eduardfrontend.netlify.app" }
+    { text: "my site: https://yemelyanov-eduard-frontend.netlify.app/", isLink: true, url: "https://yemelyanov-eduard-frontend.netlify.app/" }
 ];
 
 const renderItem = ({ text, isLink, url }: { text: string, isLink: boolean, url: string }): React.ReactNode => {
