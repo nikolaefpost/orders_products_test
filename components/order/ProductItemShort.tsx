@@ -57,7 +57,7 @@ const ProductItemShort: FC<ProductItemProps> = ({product}) => {
             <ModalCustom
                 show={show}
                 handleClose={handleClose}
-                title="Вы уверенны, что хотите удалить этот проход?"
+                title="Вы уверенны, что хотите удалить этот продукт?"
                 handleRemoveOrder={handleRemoveOrder}
             >
                 <ProductItemModal title={product.title} isNew={isNew} serialNumber={product.serialNumber}/>

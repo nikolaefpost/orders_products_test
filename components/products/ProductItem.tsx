@@ -1,17 +1,18 @@
 import React, {FC, useState} from 'react';
 import {IOrder, IProduct} from "@/types";
-import {Col, Row} from "react-bootstrap";
+import { Row} from "react-bootstrap";
 import Image from "next/image";
 import {RiDeleteBin6Line} from "react-icons/ri";
-import styles from "./productComponents.module.css";
 import cn from "classnames";
-import {getOrderTitle, transformDate, transformDateNumber, transformDateWithTime} from "@/helpers";
+import {getOrderTitle, transformDate, transformDateNumber} from "@/helpers";
 import {useDispatch} from "react-redux";
 import ModalCustom from "@/components/UI/ModalCustom";
 import ProductItemModal from "@/components/products/ProductItemModal";
 import {AppDispatch} from "@/store";
 import {deleteProductFromOrder} from "@/store/ordersSlice";
 import {removeProduct} from "@/store/productsSlice";
+
+import styles from "./productComponents.module.css";
 
 interface ProductItemProps {
     product: IProduct;
@@ -96,7 +97,7 @@ const ProductItem: FC<ProductItemProps> = ({product, orders}) => {
             <ModalCustom
                 show={show}
                 handleClose={handleClose}
-                title="Вы уверенны, что хотите удалить этот проход?"
+                title="Вы уверенны, что хотите удалить этот продукт?"
                 handleRemoveOrder={handleRemoveOrder}
             >
                 <ProductItemModal title={product.title} isNew={isNew} serialNumber={product.serialNumber}/>

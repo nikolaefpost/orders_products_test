@@ -13,7 +13,6 @@ const ProductItemModal: FC<ProductItemProps> = ({isNew, title, serialNumber}) =>
         <Row
             className="justify-content-start align-items-center flex-nowrap "
         >
-            {/*<div className={styles.item}>*/}
             <Col sm="1" className="justify-content-center d-flex flex-shrink-0">
                 <div
                     style={{width: "8px", height: "8px"}}

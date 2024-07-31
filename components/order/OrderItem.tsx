@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { IOrder } from "@/types";
 import { FaList } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import {calculateTotalAmounts, transformDate, transformDateNumber, transformDateWithTime} from "@/helpers";
+import {calculateTotalAmounts, transformDate, transformDateNumber} from "@/helpers";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/store";
 import { deleteOrder } from "@/store/ordersSlice";
@@ -63,7 +63,7 @@ const OrderItem: FC<OrderItemProps> = ({ order, handlerShowProducts }) => {
             <ModalCustom
                 show={show}
                 handleClose={handleClose}
-                title="Вы уверенны, что хотите удалить этот проход?"
+                title="Вы уверенны, что хотите удалить этот приход?"
                 handleRemoveOrder={handleRemoveOrder}
             >
                 <OrderItemModal

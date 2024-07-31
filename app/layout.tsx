@@ -1,5 +1,5 @@
 'use client';
-
+import { metadata } from './metadata';
 import {Inter} from "next/font/google";
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,22 +17,19 @@ const variants = {
     exit: {opacity: 0, x: 0, y: -100},
 };
 
-
 const inter = Inter({subsets: ["cyrillic"]});
 
-// export const metadata: Metadata = {
-//     title: "OrdersAll & Products",
-//     description: "Test project",
-// };
-
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
+    const pageTitle = metadata.title ?? 'Default Title';
+    const pageDescription = metadata.description ?? 'Default Description';
     const pathname = usePathname();
     return (
         <html lang="en">
+        <head>
+            <title>{pageTitle}</title>
+            <meta name="description" content={pageDescription}/>
+            {/*<link rel="icon" href="/favicon.ico"/>*/}
+        </head>
         <body className={inter.className}>
         <ReduxProvider>
             <Container fluid>
@@ -54,10 +51,6 @@ export default function RootLayout({
                         </ AnimatePresence>
                     </Col>
                 </Row>
-                {/*<div className="d-flex justify-content-center mt-3">*/}
-                {/*    <Button variant="primary">Click Me</Button>*/}
-
-                {/*</div>*/}
             </Container>
         </ReduxProvider>
         </body>

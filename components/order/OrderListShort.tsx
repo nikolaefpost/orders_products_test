@@ -4,7 +4,6 @@ import {Col, Row} from "react-bootstrap";
 import OrderItemShort from "@/components/order/OrderItemShort";
 import ProductsListShort from "@/components/order/ProductsListShort";
 
-// import useFetchOrdersAndProducts from "@/hooks/useFetchOrdersAndProducts";
 
 interface OrderListShortProps {
     orderId: number;

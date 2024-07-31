@@ -3,9 +3,9 @@ import { Col } from 'react-bootstrap';
 import Image from 'next/image'
 import hardy from "@/assets/images/Hurdy.jpg";
 import { MdSettings } from "react-icons/md";
+import NavigationMenuList from "./NavigationMenuList";
 
 import styles from "./navigation_menu.module.css";
-import NavigationMenuList from "./NavigationMenuList";
 
 const NavigationMenu = () => {
 

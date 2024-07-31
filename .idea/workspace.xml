@@ -4,25 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="feat: before animations">
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.setup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setupTests.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/hooks/useFetchOrdersAndProducts.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/order/ordersSlice.test.ts" afterDir="false" />
+    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="feat: that's probably all">
+      <change afterPath="$PROJECT_DIR$/app/metadata.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/products/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/products/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/order/OrderItemShort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrderItemShort.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/order/OrdersAll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrdersAll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/order/ProductsListShort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/ProductsListShort.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useFetchOrdersAndProducts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useFetchOrdersAndProducts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/ordersSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/ordersSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/productsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/productsSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/orders/orders.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigationMenu/NavigationMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigationMenu/NavigationMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/OrderItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrderItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/OrderListShort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrderListShort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/ProductItemShort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/ProductItemShort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/order.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/products/ProductItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/products/ProductItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/products/ProductItemModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/products/ProductItemModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/data.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yemel/WebstormProjects/monetiseur_front&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yemel/WebstormProjects/orders_products/app&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -77,17 +78,17 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yemel\WebstormProjects\orders_products\app" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\assets\images" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\app\settings" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\app\users" />
-      <recent name="C:\Users\yemel\WebstormProjects\orders_products\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yemel\WebstormProjects\orders_products\public" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\server" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\components\navigationMenu" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\components\topMenu" />
-      <recent name="C:\Users\yemel\WebstormProjects\orders_products\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -153,6 +154,7 @@
       <workItem from="1722322903581" duration="8674000" />
       <workItem from="1722349591872" duration="8833000" />
       <workItem from="1722406992299" duration="7335000" />
+      <workItem from="1722422112877" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="feat: start">
       <option name="closed" value="true" />
@@ -207,6 +209,18 @@
     <MESSAGE value="feat: start" />
     <MESSAGE value="feat: Products Orders UI" />
     <MESSAGE value="feat: before animations" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: before animations" />
+    <MESSAGE value="feat: that's probably all" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: that's probably all" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/layout.tsx</url>
+          <line>39</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

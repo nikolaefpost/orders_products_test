@@ -1,8 +1,0 @@
-.my_fade {
-    opacity: 1;
-    transition: opacity 3000ms ease-in-out;
-}
-
-.my_fade-hidden {
-    opacity: 0;
-}

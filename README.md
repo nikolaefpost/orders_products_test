@@ -4,14 +4,15 @@ This project is a web application for managing orders and products using Next.js
 
 ## Technologies Used
 
-- Next.js
-- React
-- Redux Toolkit
-- Axios
-- Express.js
-- TypeScript
-- Bootstrap
-- Concurrently
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Axios](https://axios-http.com/)
+- [Express.js](https://expressjs.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Concurrently](https://www.npmjs.com/package/concurrently)
+- [Framer Motion](https://www.framer.com/api/motion/)
 
 ## Installation and Setup
 
@@ -63,7 +64,10 @@ This project is a web application for managing orders and products using Next.js
 - **temp**: Temporary files.
 - **types**: TypeScript types.
 
+## Notes
 
+- [Framer Motion](https://www.framer.com/api/motion/) is used for animations in the application.
+- A custom [Node.js](https://nodejs.org/) server is employed for data transfer to demonstrate the asynchronous capabilities of the application.
 
 ## Useful Links
 
@@ -72,6 +76,7 @@ This project is a web application for managing orders and products using Next.js
 - [Redux Toolkit Documentation](https://redux-toolkit.js.org/introduction/getting-started)
 - [Express.js Documentation](https://expressjs.com/)
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Framer Motion Documentation](https://www.framer.com/api/motion/)
 
 ## License
 
