@@ -2,13 +2,13 @@ import React, {FC, useState} from 'react';
 import {Col, Row} from "react-bootstrap";
 import Image from "next/image";
 import {IProduct} from "@/types";
-import {RiDeleteBin6Line} from "react-icons/ri";
 import {useDispatch} from "react-redux";
 import ProductItemModal from "@/components/products/ProductItemModal";
 import ModalCustom from "@/components/UI/ModalCustom";
 import {AppDispatch} from "@/store";
 import { removeProduct} from "@/store/productsSlice";
 import {deleteProductFromOrder} from "@/store/ordersSlice";
+import DeleteIcon from "@/assets/svg/DeleteIcon";
 
 
 interface ProductItemProps {
@@ -51,7 +51,7 @@ const ProductItemShort: FC<ProductItemProps> = ({product}) => {
                 <Col md="2">{isNew ? <span className="text-success">Свободен</span> :
                     <span className="text-dark">В ремонте</span>}</Col>
                 <Col md="1">
-                    <button className="border-0 bg-transparent" onClick={handleShow}><RiDeleteBin6Line/></button>
+                    <button className="border-0 bg-transparent" onClick={handleShow}><DeleteIcon  size={20}/></button>
                 </Col>
             </Row>
             <ModalCustom

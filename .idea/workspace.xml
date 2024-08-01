@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="feat: that's probably all">
+    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="fix: bags from IT-Specialist">
+      <change afterPath="$PROJECT_DIR$/assets/svg/Clock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/DeleteIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/MenuIcon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/ModalCustom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/ModalCustom.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/OrderItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrderItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/OrderItemShort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrderItemShort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/ProductItemShort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/ProductItemShort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/products/ProductItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/products/ProductItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/topMenu/Date_Time.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/topMenu/Date_Time.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useClock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useClock.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +25,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -40,38 +49,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yemel/WebstormProjects/orders_products/app&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\yemel\\WebstormProjects\\orders_products\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/yemel/WebstormProjects/orders_products/assets/svg",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.test.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\yemel\\WebstormProjects\\orders_products\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yemel\WebstormProjects\orders_products\assets\svg" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\app" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\assets\images" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\app\settings" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\app\users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yemel\WebstormProjects\orders_products\assets" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\public" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\server" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products" />
       <recent name="C:\Users\yemel\WebstormProjects\orders_products\components\navigationMenu" />
-      <recent name="C:\Users\yemel\WebstormProjects\orders_products\components\topMenu" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -137,7 +147,9 @@
       <workItem from="1722322903581" duration="8674000" />
       <workItem from="1722349591872" duration="8833000" />
       <workItem from="1722406992299" duration="7335000" />
-      <workItem from="1722422112877" duration="1650000" />
+      <workItem from="1722422112877" duration="2676000" />
+      <workItem from="1722502637790" duration="8000" />
+      <workItem from="1722502655107" duration="5209000" />
     </task>
     <task id="LOCAL-00001" summary="feat: start">
       <option name="closed" value="true" />
@@ -179,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722422449204</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: that's probably all+">
+      <option name="closed" value="true" />
+      <created>1722423798070</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722423798070</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,14 +221,16 @@
     <MESSAGE value="feat: Products Orders UI" />
     <MESSAGE value="feat: before animations" />
     <MESSAGE value="feat: that's probably all" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: that's probably all" />
+    <MESSAGE value="feat: that's probably all+" />
+    <MESSAGE value="fix: bags from IT-Specialist" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: bags from IT-Specialist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/layout.tsx</url>
-          <line>39</line>
+          <line>56</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

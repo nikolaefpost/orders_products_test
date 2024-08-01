@@ -2,7 +2,6 @@ import React, {FC, useState} from 'react';
 import {IOrder, IProduct} from "@/types";
 import { Row} from "react-bootstrap";
 import Image from "next/image";
-import {RiDeleteBin6Line} from "react-icons/ri";
 import cn from "classnames";
 import {getOrderTitle, transformDate, transformDateNumber} from "@/helpers";
 import {useDispatch} from "react-redux";
@@ -13,6 +12,7 @@ import {deleteProductFromOrder} from "@/store/ordersSlice";
 import {removeProduct} from "@/store/productsSlice";
 
 import styles from "./productComponents.module.css";
+import DeleteIcon from "@/assets/svg/DeleteIcon";
 
 interface ProductItemProps {
     product: IProduct;
@@ -90,7 +90,9 @@ const ProductItem: FC<ProductItemProps> = ({product, orders}) => {
                     <span>{dateString}</span>
                 </div>
                 <div className={cn("flex-shrink-0", styles.product_delete)}>
-                    <button className="border-0 bg-transparent" onClick={handleShow}><RiDeleteBin6Line/></button>
+                    <button className="border-0 bg-transparent" onClick={handleShow}>
+                        <DeleteIcon  size={20}/>
+                    </button>
                 </div>
                 {/*</div>*/}
             </Row>

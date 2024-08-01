@@ -4,11 +4,16 @@ const useClock = () => {
     const [time, setTime] = useState<Date>(new Date());
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            setTime(new Date());
-        }, 1000); // Update every minute
+        let animationFrameId: number;
 
-        return () => clearInterval(intervalId); // Cleanup interval on component unmount
+        const updateClock = () => {
+            setTime(new Date());
+            animationFrameId = requestAnimationFrame(updateClock);
+        };
+
+        updateClock();
+
+        return () => cancelAnimationFrame(animationFrameId); // Cleanup on component unmount
     }, []);
 
     const formatTime = (date: Date): string => {
@@ -35,4 +40,3 @@ const useClock = () => {
 };
 
 export default useClock;
-

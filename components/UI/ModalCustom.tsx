@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import {Button, Modal} from "react-bootstrap";
 import CloseButtonCustom from "@/components/UI/CloseButtonCustom";
-import {RiDeleteBin6Line} from "react-icons/ri";
 import styles from "./ui.module.css"
+import DeleteIcon from "@/assets/svg/DeleteIcon";
 
 interface ModalCustomProps {
     show: boolean;
@@ -45,7 +45,7 @@ const ModalCustom: FC<ModalCustomProps> = ({
                     variant="outline-danger"
                     onClick={handleRemoveOrder}
                 >
-                    <RiDeleteBin6Line/> УДАЛИТЬ
+                    <DeleteIcon className="pb-1"  size={18} color="#dc3545"/> УДАЛИТЬ
                 </Button>
             </Modal.Footer>
         </Modal>

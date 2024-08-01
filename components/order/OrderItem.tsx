@@ -1,14 +1,14 @@
 import React, { FC, useState } from 'react';
 import { Row, Col } from "react-bootstrap";
 import { IOrder } from "@/types";
-import { FaList } from "react-icons/fa";
-import { RiDeleteBin6Line } from "react-icons/ri";
 import {calculateTotalAmounts, transformDate, transformDateNumber} from "@/helpers";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/store";
 import { deleteOrder } from "@/store/ordersSlice";
 import ModalCustom from "@/components/UI/ModalCustom";
 import OrderItemModal from "@/components/order/OrderItemModal";
+import DeleteIcon from "@/assets/svg/DeleteIcon";
+import MenuIcon from "@/assets/svg/MenuIcon";
 
 interface OrderItemProps {
     order: IOrder;
@@ -41,7 +41,7 @@ const OrderItem: FC<OrderItemProps> = ({ order, handlerShowProducts }) => {
                         <button
                             className="border-0 bg-transparent"
                             onClick={() => handlerShowProducts(id)}
-                        ><FaList size={20} /></button>
+                        ><MenuIcon /></button>
                     </div>
                     <div className="d-flex flex-column">
                         <span>{amountProduct}</span>
@@ -57,7 +57,7 @@ const OrderItem: FC<OrderItemProps> = ({ order, handlerShowProducts }) => {
                     <span>{totalUAH} UAN</span>
                 </Col>
                 <Col md="1">
-                    <button className="border-0 bg-transparent" onClick={handleShow}><RiDeleteBin6Line /></button>
+                    <button className="border-0 bg-transparent" onClick={handleShow}><DeleteIcon  size={20}/></button>
                 </Col>
             </Row>
             <ModalCustom

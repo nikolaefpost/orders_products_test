@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {IOrder} from "@/types";
 import {Col, Row} from "react-bootstrap";
 import { transformDateWithTime} from "@/helpers";
-import {FaList} from "react-icons/fa";
+import MenuIcon from "@/assets/svg/MenuIcon";
 
 interface OrderItemProps {
     order: IOrder;
@@ -21,7 +21,7 @@ const OrderItemShort: FC<OrderItemProps> = ({order, handlerChangeOrderId, orderI
                     <button
                         className="border-0 bg-transparent"
                         onClick={()=>handlerChangeOrderId(id)}
-                    ><FaList size={20}/></button>
+                    ><MenuIcon /></button>
                 </div>
                 <div className="d-flex flex-column">
                     <span>{amountProduct}</span>
