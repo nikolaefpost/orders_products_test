@@ -8,14 +8,14 @@ interface OrderListProps {
 }
 
 
-const OrderList: FC<OrderListProps> = ({orders, handlerShowProducts}) => {
+const OrderList: FC<OrderListProps> = React.memo( ({orders, handlerShowProducts}) => {
     return (
-        <div className="container  mt-5">
+        <div className="container  mt-5" >
             {orders.map(item =>(
                 <OrderItem key={item.id} order={item} handlerShowProducts={handlerShowProducts}/>
             ))}
             </div>
     );
-};
+});
 
 export default OrderList;

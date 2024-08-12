@@ -5,6 +5,7 @@ import useClock from "@/hooks/useClock";
 import Clock from "@/assets/svg/Clock";
 
 const DateTime = () => {
+
     const { formattedTime, formattedDate, weekday } = useClock();
     return (
         <Col className="" xxl={2} xl={3} md={4}>

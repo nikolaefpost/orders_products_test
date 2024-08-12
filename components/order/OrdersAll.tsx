@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, {FC, useCallback, useState} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import OrderList from "@/components/order/OrderList";
 import OrderListShort from "@/components/order/OrderListShort";
@@ -12,10 +12,10 @@ const OrdersAll: FC<OrdersAllProps> = ({ orders }) => {
     const [showProducts, setShowProducts] = useState(false);
     const [orderId, setOrderId] = useState(0);
 
-    const handlerShowProducts = (id: number) => {
+    const handlerShowProducts = useCallback ((id: number) => {
         setOrderId(id);
         setShowProducts(true);
-    };
+    }, [setOrderId, setShowProducts]);
 
     const handlerChangeOrderId = (id: number) => {
         setOrderId(id);

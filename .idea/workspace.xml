@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="fix: bags from IT-Specialist">
+    <list default="true" id="dadc7023-4a92-4ca0-ae31-311775d39883" name="Changes" comment="feat: use lazy and Suspense">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/groups/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/groups/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/orders/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/orders/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/products/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/products/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/OrderList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrderList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/OrdersAll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/OrdersAll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/topMenu/Date_Time.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/topMenu/Date_Time.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/topMenu/TopMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/topMenu/TopMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +51,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yemel/WebstormProjects/fragment_of_store&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yemel/WebstormProjects/orders_products&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -144,7 +149,16 @@
       <workItem from="1722502655107" duration="5335000" />
       <workItem from="1722524310908" duration="284000" />
       <workItem from="1722700018806" duration="433000" />
-      <workItem from="1722772321587" duration="2850000" />
+      <workItem from="1722772321587" duration="4273000" />
+      <workItem from="1722842822243" duration="1143000" />
+      <workItem from="1722867175713" duration="2202000" />
+      <workItem from="1722927238737" duration="4733000" />
+      <workItem from="1723034320198" duration="3353000" />
+      <workItem from="1723101745969" duration="15797000" />
+      <workItem from="1723184970315" duration="2072000" />
+      <workItem from="1723278120935" duration="6135000" />
+      <workItem from="1723366894940" duration="346000" />
+      <workItem from="1723444188876" duration="379000" />
     </task>
     <task id="LOCAL-00001" summary="feat: start">
       <option name="closed" value="true" />
@@ -202,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722507877951</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: use lazy and Suspense">
+      <option name="closed" value="true" />
+      <created>1722780232572</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722780232572</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,17 +248,7 @@
     <MESSAGE value="feat: that's probably all" />
     <MESSAGE value="feat: that's probably all+" />
     <MESSAGE value="fix: bags from IT-Specialist" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: bags from IT-Specialist" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/layout.tsx</url>
-          <line>56</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="feat: use lazy and Suspense" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: use lazy and Suspense" />
   </component>
 </project>

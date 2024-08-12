@@ -1,9 +1,13 @@
 import {IOrder, IProduct} from "@/types";
 
-const months: string[] = [
+// const months: string[] = [
+//     "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
+//     "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"
+// ];
+enum monthsType {
     "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
     "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"
-];
+}
 
 export const transformDateWithTime = (dateString: string): { timeString: string, dateString: string } =>{
     const date = new Date(dateString);
@@ -14,7 +18,7 @@ export const transformDateWithTime = (dateString: string): { timeString: string,
     const timeString = `${hours} : ${minutes}`;
 
     const day = date.getDate().toString().padStart(2, '0');
-    const month = months[date.getMonth()];
+    const month = monthsType[date.getMonth()];
     const year = date.getFullYear();
     const dateStringTransformed = `${day} / ${month} / ${year}`;
 
@@ -29,7 +33,7 @@ export const transformDate = (dateString: string): {  dateString: string } =>{
     const date = new Date(dateString);
 
     const day = date.getDate().toString().padStart(2, '0');
-    const month = months[date.getMonth()];
+    const month = monthsType[date.getMonth()];
     const year = date.getFullYear();
     const dateStringTransformed = `${day} / ${month} / ${year}`;
 
